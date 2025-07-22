@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<style>
+p{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: skyblue;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr;
+            grid-template-areas:
+                "logo title"
+                "menu content";
+        }
+
+        .logo {
+            grid-area: logo;
+            background-color: rgb(70,255,136);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #0277bd;
+            border-right: 1px solid #ccc;
+           
+        }
+
+        .title {
+            grid-area: title;
+            background-color: rgb(255,255,141);
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            font-size: 1.5em;
+        color: #0277bd;
+            font-weight: bold;
+            border-bottom: 1px solid#ccc;
+	}
+	
+        .menu {
+            grid-area: menu;
+            background-color: rgb(70,255,136);
+            padding: 15px;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        .menu a {
+            display: block;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #0277bd;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #ffffff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .member-card {
+            background-color: #b3e5fc;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+
+        .member-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .member-card a {
+            display: block;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #01579b;
+            text-decoration: none;
+        }
+
+        .member-card a:hover {
+            text-decoration: underline;
+        }
+  .melon {
+  color: #a8e57c;  font-weight: bold; 
+  }
+h5 {
+  color: #FFD700;                 /* 鮮やかな黄色（ゴールデンイエロー） */
+  background-color: #003366;      /* 濃い紺色 */
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  display: inline-block;
+  margin: 1.5em 0 1em;
+}
+h3.vertical-align-h3 {
+  position: relative;
+  display: inline-block;    /* 幅は画像に合わせて */
+  padding-left: 0;          /* 画像の位置を変えない */
+  margin: 0;
+}
+
+h3.vertical-align-h3 img {
+  display: block;
+  width: 150px;
+}
+
+h3.vertical-align-h3 .caption-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 150px;
+  transform: translateY(-50%);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  background: transparent;
+}
+
+a.pink {
+  background-color: #FFB7C5;  /* 桜ピンク */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #E6C/* pinnkunohougaiiで読みやすく */
+}
+
+a.red {
+  background-color: #C0392B;  /* モミジ赤 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #FFC107 /* 白文字が見やすい */
+}
+
+a.kiiro {
+  background-color: #FFF9C4;  /* 淡い黄色 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #5D4037;
+}
+
+a.konn {
+  background-color: #2C3E50;  /* 夕方〜夜の紺色 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #FFEB3B;
+}
+
+a.orenji {
+  background-color: #F39C12;  /* 夕方のオレンジ */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #3E2723;
+}
+a.text {
+  background-color: #DFF5E3;  /* やさしい淡緑（ミント～メロン系） */
+  color: #7BB661;             /* メロン色っぽい緑系の文字 */
+  font-weight: bold;
+  padding: 0.1em 0.3em;       /* 空白を控えめに */
+  border-radius: 2px;
+  font-size: 2.0em;
+  line-height: 1.2;
+}
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="logo">
+   
+</div>
+
+<div class="title">
+   自分の推しについて
+</div>
+
+<div class="menu">
+    <a href="http://www.edu.cc.uec.ac.jp/~s2512127/seopage1.html">瀬尾の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~t2512155/tokoipage1.html">床井の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~n2512171/nakamotopage1.html">中元の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~n2512179/negisipage1.html">根岸の推し紹介のページ</a>
+</div>
+<div class="content">
+  <h2>
+    <pre>
+<img src="https://www.tunecore.co.jp/s3pna/tcj-image-production/u81454/a407256/ite141654.jpg" width="300">
+    </pre>
+    <pre> <span class="text">戌亥とこ</span></pre>
+<p>プロフィール</p>
+<pre>  
+  <span class="melon">誕生日:</span>9月9日
+  
+  <span class="melon">身長:</span>162cm
+  
+  <span class="melon">年齢:</span>不明(200を超えてから数えていない)
+
+  <span class="melon">デビュー日:</span>2019年3月22日
+</pre>
+<p>公式紹介文</p>
+<pre>
+寂れた和風喫茶で働く女の子。店長の趣味でメイド服を着せられている。
+足下に見え隠れする尻尾が本物かどうかは、触れた人のみぞ知る。
+</pre>
+    <p>Song</p>
+ <pre>  
+  <h5>1st Single『地獄屋八丁荒らし』</h5>
+
+  <img src="https://i.ytimg.com/vi/XwZZeMNanKw/maxresdefault.jpg" width="500">
+   
+  <a href="https://www.youtube.com/watch?v=XwZZeMNanKw" class="">【MV】地獄屋八丁荒らし </a>
+
+
+  
+  <h5>2nd Single『Engaged stories』</h5>
+  <span class="2">
+   
+  <img src="https://i.ytimg.com/vi/gys6TNZx9kU/maxresdefault.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=gys6TNZx9kU" class="pink">【MV】Engaged stories</span></a>
+  
+
+
+  <h5>3rd Single『初恋』</h5>
+  <img src="https://i.ytimg.com/vi/G7aJCz6E_YY/maxresdefault.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=G7aJCz6E_YY" class="red">【MV】初恋</a>
+
+  
+  
+  <h5>1st mini Album『Telescope』</h5>
+  <img src="https://i.ytimg.com/vi/86jv7aZmm5c/mqdefault.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=86jv7aZmm5c" class="kiiro">【MV】テレスコープ</a>
+
+  
+
+  <img src="https://i.ytimg.com/vi/JRYdJA-QsVI/maxresdefault.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=JRYdJA-QsVI" class="orenji">【MV】六道伍感さんぽ</a>
+
+  
+
+  <img src="https://skream.jp/news/assets_c/2023/11/inuitoko-thumb-1200xauto-197410.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI" class="konn">【MV】Twilight Road</a>
+  
+</pre>
+<p>関連URL</p>
+<pre>
+  <a href="https://www.youtube.com/channel/UCXRlIK3Cw_TJIQC5kSJJQMg">YouTube</a>
+  
+  <a href="https://x.com/inui_toko">公式X</a>
+  
+  <a href=seopage3.html>Nornis</a>
+  
+  <a href=matita.html>町田ちま</a>
+</pre>
+</h2>
+</body>
+</html>

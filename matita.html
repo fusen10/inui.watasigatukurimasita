@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<style>
+ p{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: skyblue;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr;
+            grid-template-areas:
+                "logo title"
+                "menu content";
+        }
+
+        .logo {
+            grid-area: logo;
+            background-color: rgb(70,255,136);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #0277bd;
+            border-right: 1px solid #ccc;
+           
+        }
+
+        .title {
+            grid-area: title;
+            background-color: rgb(255,255,141);
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            font-size: 1.5em;
+        color: #0277bd;
+            font-weight: bold;
+            border-bottom: 1px solid#ccc;
+	}
+	
+        .menu {
+            grid-area: menu;
+            background-color: rgb(70,255,136);
+            padding: 15px;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        .menu a {
+            display: block;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #0277bd;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #ffffff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .member-card {
+            background-color: #b3e5fc;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+
+        .member-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .member-card a {
+            display: block;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #01579b;
+            text-decoration: none;
+        }
+
+        .member-card a:hover {
+            text-decoration: underline;
+        }
+  .melon {
+  color: #80C8EF;  font-weight: bold; 
+  }
+h5 {
+  color: #FFD700;                 /* 鮮やかな黄色（ゴールデンイエロー） */
+  background-color: #003366;      /* 濃い紺色 */
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  display: inline-block;
+  margin: 1.5em 0 1em;
+}
+.text {
+  background-color: #E3F9F1;  /* やさしい淡緑（ミント～メロン系） */
+  color: #80C8EF;             /* メロン色っぽい緑系の文字 */
+  font-weight: bold;
+  padding: 0.1em 0.3em;       /* 空白を控えめに */
+  border-radius: 2px;
+  font-size: 2.0em;
+  line-height: 1.2;
+}
+
+a.url{
+  color: #FFD700;                 /* 鮮やかな黄色（ゴールデンイエロー） */
+  background-color: #003366;      /* 濃い紺色 */
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  display: inline-block;
+  margin: 1.5em 0 1em;
+}
+a.rokugatu {
+  background-color: #80C8EF;  /* 空の青 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #FFD233;             /* ひまわり黄色 */
+}
+
+a.namaenonai {
+  background-color: #E6F0FA;  /* 白に近い淡い青 */
+  color: #4A90E2;             /* 空の青 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+a.arubamunasi
+{ background-color: #003366;  /* 白に近い淡い青 */
+  color:#FFD700 ;             /* 空の青 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+a.haigo {
+  background-color: #4B306A;  /* 少し明るめの紫（ラベンダー系） */
+  color: #B22222;             /* ファイアブリック：読みやすい深赤 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.kasei {
+  background-color: #1F237D;  /* 紫っぽい青の背景 */
+  color: #F0F0F5;             /* 白っぽい文字 */
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+}
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="logo">
+   
+</div>
+
+<div class="title">
+   自分の推しについて
+</div>
+
+<div class="menu">
+    <a href="http://www.edu.cc.uec.ac.jp/~s2512127/seopage1.html">瀬尾の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~t2512155/tokoipage1.html">床井の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~n2512171/nakamotopage1.html">中元の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~n2512179/negisipage1.html">根岸の推し紹介のページ</a>
+</div>
+<div class="content">
+  <h2>
+<img src="https://th.bing.com/th/id/R.7743e3b41f042d00cecb8db77ca9ee01?rik=erIvP94%2bBBPn8w&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f0577%2f1254%2f1891%2fcollections%2fiumAe7pQr2D1jwLU.jpg%3fv%3d1666356202&ehk=%2f0%2fDPBomuFjlBIUzwWduMO4KYh4Nu2UhigmJqdY6so4%3d&risl=&pid=ImgRaw&r=0" width="300">
+<pre><span class="text">町田ちま</pre>
+<p>プロフィール</p>
+<pre>  
+  <span class="melon">誕生日:</span>8月5日
+  
+  <span class="melon">身長:</span>150cm未満
+  
+  <span class="melon">年齢:</span>16歳
+
+  <span class="melon">デビュー日:</span>2018年9月3日
+</pre>
+<p>公式紹介文</p>
+<pre>
+  16歳の高校2年生。歌手になることが夢で日々歌の練習に励んでいる。
+  夢の実現に少しでもつながればと思い配信を始めた。
+  一人暮らしは寂しいので、ゴンザレスという名前のハムスターと一緒に暮らしている。
+
+</pre>
+
+<p>Song</p>
+<pre>
+  <h5>1st Single『６月のプレリュード』</h5>
+  <img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a6/6b/f0/a66bf0d3-2070-2abd-5b75-f0bf9919177e/859757085187_cover.png/1200x1200bf-60.jpg" width="500">
+    
+  <a href="https://www.youtube.com/watch?v=2yD0iNl2E-I" class="rokugatu">【MV】６月のプレリュード</a>
+
+  
+  
+  <h5>1st mini Album『The Pages』</h5>
+  <img src="https://prcdn.freetls.fastly.net/release_image/30865/754/30865-754-cc175b20991b545180757c92e555adf7-3900x3900.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1950&height=1350&fit=bounds" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=86jv7aZmm5c" class="namaenonai">【MV】名前のない感情</a>
+
+  
+
+  <img src="https://asset.panora.tokyo/wp-content/uploads/2023/10/02194008/30865-710-2aa07dcd436e4f8c53f5d3d8ed505fcc-1920x1080-1.jpg" width="500">
+  
+  <a href="https://i.ytimg.com/vi/tKvpN8F6Np0/maxresdefault.jpg" class="haigo">【MV】背後に注意</a>
+
+  
+
+  <img src="https://i.ytimg.com/vi/YQr2g2ohrmw/mqdefault.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI" class="kasei">【MV】苛性瑠璃色真夜中</a>
+  
+
+
+  <img src="https://skream.jp/news/assets_c/2023/11/machitachima-thumb-1200xauto-197237.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI" class="arubamunasi">つぎはぎどうし</></a>            <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI"class="arubamunasi">ひとひらの未来</a>
+  
+</pre>
+<p>関連URL</p>
+<pre>
+<a href="https://www.youtube.com/channel/UCo7TRj3cS-f_1D9ZDmuTsjw">YouTube</a>
+
+<a href="https://x.com/chima_machita23">公式X</a>
+
+<a href=seopage3.html>Nornis</a>
+
+<a href=inui.html>戌亥とこ</a>
+</pre>
+</h2>
+</body>
+</html>
