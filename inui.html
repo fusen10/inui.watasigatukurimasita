@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 
 <style>
- p{
+p{
     font-size: 1.3em;
     font-weight: bold;
     color: skyblue;
@@ -114,7 +114,7 @@
             text-decoration: underline;
         }
   .melon {
-  color: #80C8EF;  font-weight: bold; 
+  color: #a8e57c;  font-weight: bold; 
   }
 h5 {
   color: #FFD700;                 /* 鮮やかな黄色（ゴールデンイエロー） */
@@ -129,75 +129,78 @@ h5 {
   display: inline-block;
   margin: 1.5em 0 1em;
 }
-.text {
-  background-color: #E3F9F1;  /* やさしい淡緑（ミント～メロン系） */
-  color: #80C8EF;             /* メロン色っぽい緑系の文字 */
+h3.vertical-align-h3 {
+  position: relative;
+  display: inline-block;    /* 幅は画像に合わせて */
+  padding-left: 0;          /* 画像の位置を変えない */
+  margin: 0;
+}
+
+h3.vertical-align-h3 img {
+  display: block;
+  width: 150px;
+}
+
+h3.vertical-align-h3 .caption-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 150px;
+  transform: translateY(-50%);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  background: transparent;
+}
+
+a.pink {
+  background-color: #FFB7C5;  /* 桜ピンク */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #E6C/* pinnkunohougaiiで読みやすく */
+}
+
+a.red {
+  background-color: #C0392B;  /* モミジ赤 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #FFC107 /* 白文字が見やすい */
+}
+
+a.kiiro {
+  background-color: #FFF9C4;  /* 淡い黄色 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #5D4037;
+}
+
+a.konn {
+  background-color: #2C3E50;  /* 夕方〜夜の紺色 */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #FFEB3B;
+}
+
+a.orenji {
+  background-color: #F39C12;  /* 夕方のオレンジ */
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  color: #3E2723;
+}
+a.text {
+  background-color: #DFF5E3;  /* やさしい淡緑（ミント～メロン系） */
+  color: #7BB661;             /* メロン色っぽい緑系の文字 */
   font-weight: bold;
   padding: 0.1em 0.3em;       /* 空白を控えめに */
   border-radius: 2px;
   font-size: 2.0em;
   line-height: 1.2;
 }
-
-a.url{
-  color: #FFD700;                 /* 鮮やかな黄色（ゴールデンイエロー） */
-  background-color: #003366;      /* 濃い紺色 */
-  font-size: 1.3em;
-  font-weight: bold;
-  padding: 10px 18px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-  display: inline-block;
-  margin: 1.5em 0 1em;
-}
-a.rokugatu {
-  background-color: #80C8EF;  /* 空の青 */
+a.jigoku {
+  background-color: #9D3757;  /* 夕方のオレンジ */
   padding: 0.2em 0.5em;
   border-radius: 4px;
-  color: #FFD233;             /* ひまわり黄色 */
-}
-
-a.namaenonai {
-  background-color: #E6F0FA;  /* 白に近い淡い青 */
-  color: #4A90E2;             /* 空の青 */
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-a.arubamunasi
-{ background-color: #003366;  /* 白に近い淡い青 */
-  color:#FFD700 ;             /* 空の青 */
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-a.haigo {
-  background-color: #4B306A;  /* 少し明るめの紫（ラベンダー系） */
-  color: #B22222;             /* ファイアブリック：読みやすい深赤 */
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.kasei {
-  background-color: #1F237D;  /* 紫っぽい青の背景 */
-  color: #F0F0F5;             /* 白っぽい文字 */
-  padding: 0.2em 0.5em;
-  border-radius: 6px;
-  font-weight: bold;
-  font-family: "Arial", sans-serif;
-}
-.arubamunai {
-  background-color: #FFF9C4;  /* 紫っぽい青の背景 */
-  color: #8B6E4E;             /* 白っぽい文字 */
-  padding: 0.2em 0.5em;
-  border-radius: 6px;
-  font-weight: bold;
-  font-family: "Arial", sans-serif;
+  color: #3E2723;
 }
 </style>
 
@@ -223,68 +226,78 @@ a.haigo {
 </div>
 <div class="content">
   <h2>
-<img src="https://th.bing.com/th/id/R.7743e3b41f042d00cecb8db77ca9ee01?rik=erIvP94%2bBBPn8w&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f0577%2f1254%2f1891%2fcollections%2fiumAe7pQr2D1jwLU.jpg%3fv%3d1666356202&ehk=%2f0%2fDPBomuFjlBIUzwWduMO4KYh4Nu2UhigmJqdY6so4%3d&risl=&pid=ImgRaw&r=0" width="300">
-<pre><span class="text">町田ちま</pre>
+    <pre>
+<img src="https://www.tunecore.co.jp/s3pna/tcj-image-production/u81454/a407256/ite141654.jpg" width="300">
+    </pre>
+    <pre> <span class="text">戌亥とこ</span></pre>
 <p>プロフィール</p>
 <pre>  
-  <span class="melon">誕生日:</span>8月5日
+  <span class="melon">誕生日:</span>9月9日
   
-  <span class="melon">身長:</span>150cm未満
+  <span class="melon">身長:</span>162cm
   
-  <span class="melon">年齢:</span>16歳
+  <span class="melon">年齢:</span>不明(200を超えてから数えていない)
 
-  <span class="melon">デビュー日:</span>2018年9月3日
+  <span class="melon">デビュー日:</span>2019年3月22日
 </pre>
 <p>公式紹介文</p>
 <pre>
-  16歳の高校2年生。歌手になることが夢で日々歌の練習に励んでいる。
-  夢の実現に少しでもつながればと思い配信を始めた。
-  一人暮らしは寂しいので、ゴンザレスという名前のハムスターと一緒に暮らしている。
-
+寂れた和風喫茶で働く女の子。店長の趣味でメイド服を着せられている。
+足下に見え隠れする尻尾が本物かどうかは、触れた人のみぞ知る。
 </pre>
+    <p>Song</p>
+ <pre>  
+  <h5>1st Single『地獄屋八丁荒らし』</h5>
 
-<p>Song</p>
-<pre>
-  <h5>1st Single『６月のプレリュード』</h5>
-  <img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a6/6b/f0/a66bf0d3-2070-2abd-5b75-f0bf9919177e/859757085187_cover.png/1200x1200bf-60.jpg" width="500">
-    
-  <a href="https://www.youtube.com/watch?v=2yD0iNl2E-I" class="rokugatu">【MV】６月のプレリュード</a>
+  <img src="https://i.ytimg.com/vi/XwZZeMNanKw/maxresdefault.jpg" width="500">
+   
+  <a href="https://www.youtube.com/watch?v=XwZZeMNanKw" class="jigoku">【MV】地獄屋八丁荒らし </a>
 
-  
-  
-  <h5>1st mini Album『The Pages』</h5>
-  <img src="https://prcdn.freetls.fastly.net/release_image/30865/754/30865-754-cc175b20991b545180757c92e555adf7-3900x3900.jpg?format=jpeg&auto=webp&quality=85%2C65&width=1950&height=1350&fit=bounds" width="500">
-  
-  <a href="https://www.youtube.com/watch?v=86jv7aZmm5c" class="namaenonai">【MV】名前のない感情</a>
 
   
-
-  <img src="https://asset.panora.tokyo/wp-content/uploads/2023/10/02194008/30865-710-2aa07dcd436e4f8c53f5d3d8ed505fcc-1920x1080-1.jpg" width="500">
+  <h5>2nd Single『Engaged stories』</h5>
+  <span class="2">
+   
+  <img src="https://i.ytimg.com/vi/gys6TNZx9kU/maxresdefault.jpg" width="500">
   
-  <a href="https://i.ytimg.com/vi/tKvpN8F6Np0/maxresdefault.jpg" class="haigo">【MV】背後に注意</a>
-
-  
-
-  <img src="https://i.ytimg.com/vi/YQr2g2ohrmw/mqdefault.jpg" width="500">
-  
-  <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI" class="kasei">【MV】苛性瑠璃色真夜中</a>
+  <a href="https://www.youtube.com/watch?v=gys6TNZx9kU" class="pink">【MV】Engaged stories</span></a>
   
 
 
-  <img src="https://skream.jp/news/assets_c/2023/11/machitachima-thumb-1200xauto-197237.jpg" width="500">
+  <h5>3rd Single『初恋』</h5>
+  <img src="https://i.ytimg.com/vi/G7aJCz6E_YY/maxresdefault.jpg" width="500">
   
-  <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI" class="arubamunai">つぎはぎどうし</></a>            <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI"class="arubamunai">ひとひらの未来</a>
+  <a href="https://www.youtube.com/watch?v=G7aJCz6E_YY" class="red">【MV】初恋</a>
+
+  
+  
+  <h5>1st mini Album『Telescope』</h5>
+  <img src="https://i.ytimg.com/vi/86jv7aZmm5c/mqdefault.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=86jv7aZmm5c" class="kiiro">【MV】テレスコープ</a>
+
+  
+
+  <img src="https://i.ytimg.com/vi/JRYdJA-QsVI/maxresdefault.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=JRYdJA-QsVI" class="orenji">【MV】六道伍感さんぽ</a>
+
+  
+
+  <img src="https://skream.jp/news/assets_c/2023/11/inuitoko-thumb-1200xauto-197410.jpg" width="500">
+  
+  <a href="https://www.youtube.com/watch?v=ReIaGLXXSCI" class="konn">【MV】Twilight Road</a>
   
 </pre>
 <p>関連URL</p>
 <pre>
-<a href="https://www.youtube.com/channel/UCo7TRj3cS-f_1D9ZDmuTsjw">YouTube</a>
-
-<a href="https://x.com/chima_machita23">公式X</a>
-
-<a href=seopage3.html>Nornis</a>
-
-<a href=inui.html>戌亥とこ</a>
+  <a href="https://www.youtube.com/channel/UCXRlIK3Cw_TJIQC5kSJJQMg">YouTube</a>
+  
+  <a href="https://x.com/inui_toko">公式X</a>
+  
+  <a href=seopage3.html>Nornis</a>
+  
+  <a href=matita.html>町田ちま</a>
 </pre>
 </h2>
 </body>
