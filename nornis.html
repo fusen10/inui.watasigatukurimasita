@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<style>
+ p{
+    font-size: 1.7em;
+    font-weight: bold;
+    color: skyblue;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+.skyblue-text{color:#87CEEB; /* skyblue */font-weight: bold;}
+
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr;
+            grid-template-areas:
+                "logo title"
+                "menu content";
+        }
+
+        .logo {
+            grid-area: logo;
+            background-color: rgb(70,255,136);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #0277bd;
+            border-right: 1px solid #ccc;
+           
+        }
+
+        .title {
+            grid-area: title;
+            background-color: rgb(255,255,141);
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            font-size: 1.5em;
+        color: #0277bd;
+            font-weight: bold;
+            border-bottom: 1px solid#ccc;
+	}
+	
+        .menu {
+            grid-area: menu;
+            background-color: rgb(70,255,136);
+            padding: 15px;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        .menu a {
+            display: block;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #0277bd;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #ffffff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .member-card {
+            background-color: #b3e5fc;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+
+        .member-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .member-card a {
+            display: block;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #01579b;
+            text-decoration: none;
+        }
+
+        .member-card a:hover {
+            text-decoration: underline;
+        }
+
+	.skyblue-text{color:#87CEEB; /* skyblue */font-weight: bold;}
+	 .melon {
+  color: #191970;  font-weight: bold; 
+	 }
+
+	 .gray {
+  color: #999999;  /* 標準的な薄いグレー */
+	 }
+
+	 h5 {
+  color: #FFD700;                 /* 鮮やかな黄色（ゴールデンイエロー） */
+  background-color: #003366;      /* 濃い紺色 */
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  display: inline-block;
+  margin: 1.5em 0 1em;
+	 }
+
+	 .textm {
+  background-color: #E3F9F1;  /* やさしい淡緑（ミント～メロン系） */
+  color: #80C8EF;             /* メロン色っぽい緑系の文字 */
+  font-weight: bold;
+  padding: 0.1em 0.3em;       /* 空白を控えめに */
+  border-radius: 2px;
+  font-size: 1.5em;
+  line-height: 1.2;
+	 }
+
+.texti { background-color: #E3F9F1;  /* 深い紫（いぬいとこのイメージカラー） */
+  color:  #6EDFC6;             /* 和紙のような生成り色の文字 */
+  font-weight: bold;
+  padding: 0.1em 0.3em;       /* 空白を控えめに */
+  border-radius: 2px;
+  font-size: 1.5em;
+  line-height: 1.2;
+       }
+.text {
+  background-color: #2A2E55;  /* 深いネイビーブルー（夜空のような印象） */
+  color: #E6EBF5;             /* 淡い銀白色（透明感・静けさを表現） */
+  font-weight: bold;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+  font-size: 2.2em;
+  line-height: 1.2;
+}
+.trans {
+  background-color: #F0FAFF;  /* ほのかな空色、白に近い */
+  color: #1E88E5;             /* 青文字（見やすく鮮やか） */
+  font-weight: bold;
+  font-size: 1.3em;
+  font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+}
+.sarubia {
+  background-color: #B3E5FC;  /* 明るめの空色（空のような背景） */
+  color: #1565C0;             /* 濃いめの青文字（しっかり見える） */
+  font-weight: bold;
+  font-size: 1.3em;
+  font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+}
+.ten {
+  background-color: #D1FFF0;  /* ミントグリーン系の明るい背景 */
+  color: #4FC3F7;             /* スカイブルー系の青文字 */
+  font-weight: bold;
+  font-size: 1.3em;
+  font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+}
+
+.taitoru {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #000000;    /* 黒文字 */
+  padding: 0;        /* 余白もなし */
+  border-radius: 0;  /* 角丸なし */
+  background: none;  /* 背景なし */
+}
+
+a.text {
+  font-weight: 700;
+  font-size: 1.0em;
+  color: #000000; 
+background-color: #ffffff;     /* 黒文字 */
+}
+</style>
+</head>
+
+
+
+<body>
+
+<div class="logo">
+   
+</div>
+
+<div class="title">
+   自分の推しについて
+</div>
+
+<div class="menu">
+    <a href="http://www.edu.cc.uec.ac.jp/~s2512127/seopage1.html">瀬尾の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~t2512155/tokoipage1.html">床井の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~n2512171/nakamotopage1.html">中元の推し紹介のページ</a>
+    <a href="http://www.edu.cc.uec.ac.jp/~n2512179/negisipage1.html">根岸の推し紹介のページ</a>
+</div>
+<div class="content">
+  <h2>
+<img src="https://img2.animatetimes.com/2023/06/fc8b88db20451db3fe68bf0688f2e5c96495ac3f8e8bc6_04868850_e66e9aed2c7aef306169c1dc212a156ea763ddf3.jpg" width="600">
+    <pre><span class="text">Nornis</pre>
+<p>プロフィール</p>
+<pre>
+  <span class="melon">活動開始日:</span>2022年6月23日
+  
+  <span class="melon">メンバー</span>
+
+  <img src="https://www.nornis.com/images/bu_toko.png">
+
+  <span class="texti">戌亥とこ</span>
+
+  
+  <img src="https://www.nornis.com/images/bu_chima.png">
+
+  <span class="textm">町田ちま</span>
+  
+  
+  <span class="melon"></span>
+  
+　<span class="melon"></span>
+
+</pre>
+<p>公式紹介文</p>
+<pre>
+  Nornis(ノルニス)とは、VTuberグループ「にじさんじ」に所属する、
+  戌亥とこ / 町田ちま の女性2人組ボーカルユニット。
+  ミドルとローが豊かな戌亥とこ、高音ハイトーンボイスの町田ちまのハーモニーを届ける。
+  現在、YouTubeチャンネルを中心に精力的に活動中。
+
+ <span class="gray"> 初期紹介文</span>
+  Nornisとは、VTuberグループ「にじさんじ」に所属する、
+  町田ちま / 戌亥とこ / 朝日南アカネの女性3人組ボーカルユニット。
+  3人にしか作り出せないハーモニーを届けるため、2022年6月にユニットとして活動開始。
+</pre>
+<p>Song</p>
+<pre>
+  <h5>1st Single『Transparent Blue』</h5>
+  <img src="https://cdn.wikiwiki.jp/proxy-image/w/nijisanji?url=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FFkbipUSVQAA0TOt.png" width="500">
+  
+  　<span class="taitoru">収録曲</span>
+
+  １，<a href="https://www.youtube.com/watch?v=qE-edzFabGc&feature=youtu.be" class="text">Transparent Blue</a>
+
+  ２，<a href="https://www.youtube.com/watch?v=E8Bke4RbSqE" class="text">Abyssal Zone</a>
+
+  ３，<a href="https://www.youtube.com/watch?v=6FLXhAMG6G0" class="text">Through the glass</a>
+
+  ４，<a href="https://www.youtube.com/watch?v=xfRbjsO0TFw" class="text">fantasy/reality</a>
+  
+  
+  <h5>2nd Single『salvia』</h5>
+  <img src="https://cdn.wikiwiki.jp/proxy-image/w/nijisanji?url=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FF69d8EcawAAkqyp.jpg" width="500">
+  
+  　<span class="taitoru">収録曲</span>
+
+  １，<a href="https://www.youtube.com/watch?v=PpbA7VeSauk" class="text">salvia</a>
+
+  ２，<a href="https://www.youtube.com/watch?v=iNaaucxywMU&list=OLAK5uy_k9F6zsmztMI918YRmZQzoPDFJhETWKRog&index=2" class="text">White Blossom - Duet ver.</a>
+
+  ３，<a href="https://www.youtube.com/watch?v=K0MFFr90OV4" class="text">Fragment - Duet ver.</a>
+
+  ４，<a href="https://www.youtube.com/watch?v=-nVURON-D8c" class="text">Ray of Hope</a>
+
+  
+  <h5>1st mini album『Tensegrity』</h5>
+  <img src="https://cdn.wikiwiki.jp/proxy-image/w/nijisanji?url=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FGLXKed_a4AAelMI.jpg" width="500">
+  
+  　<span class="taitoru">収録曲</span>
+
+  １，<a href="https://www.youtube.com/watch?v=KBsIGcxRW0Q&list=OLAK5uy_n1j-4oSERjlIGPXqK-PaSOoY8CdbNocVo" class="text">Tensegrity</a>
+
+  ２，<a href="https://www.youtube.com/watch?v=px548BCogoM" class="text">Deep Forest</a>
+
+  ３，<a href="https://www.youtube.com/watch?v=66FfVXogNUc" class="text">ジョハリ</a>
+
+  ４，<a href="https://www.youtube.com/watch?v=DwR81Ubmc9o&list=OLAK5uy_n1j-4oSERjlIGPXqK-PaSOoY8CdbNocVo&index=5" class="text">Shangri-la</a>
+
+  ５，<a href="https://www.youtube.com/watch?v=9CP-wNCaJPY&list=OLAK5uy_n1j-4oSERjlIGPXqK-PaSOoY8CdbNocVo&index=6" class="text">innocent flowers</a>
+
+  ６，<a href="https://www.youtube.com/watch?v=w3-7pV5hMP4&list=OLAK5uy_n1j-4oSERjlIGPXqK-PaSOoY8CdbNocVo&index=7" class="text">Min-night</a>
+
+  
+</pre>
+<p>Live</p>
+<pre>
+   <h5>1st Live</h5>
+   <img src="https://images.microcms-assets.io/assets/c8ea2ea0e6994d2c88cb0ae47c6f324f/ff1adc391eda443ea376691ecc535c63/event_1stlive.png?w=1600&fm=webp" width="500">
+      
+   <span class="taitoru">Transparent Blue</span>
+
+      
+   開催日時 2023年3月15日(水) OPEN/17:00 START/18:00
+
+   開催場所 グランキューブ大阪　メインホール
+
+
+
+   <h5>2nd Live</h5>
+   <img src="https://images.microcms-assets.io/assets/c8ea2ea0e6994d2c88cb0ae47c6f324f/876c97755f5c40748c2bcaeb58bed06f/NOR_LV_TOUR_announce_240419.png?w=1600&fm=webp" width="500">
+   
+   <span class="taitoru">Tensegrity</span>
+
+
+   開催概要
+
+   ①2024年9月14日(土)OPEN/18:00 START/19:00  KT Zepp Yokohama（横浜）
+
+   ②2024年9月21日(土)OPEN/18:00 START/19:00  Zepp Namba（大阪）
+
+   ③2024年9月28日(土)OPEN/17:00 START/18:00  SENDAI GIGS（仙台）
+   
+
+
+   <h5>3rd Live</h5>
+   <img src="https://images.microcms-assets.io/assets/c8ea2ea0e6994d2c88cb0ae47c6f324f/4e9e9aed1cf34d3d93410061a6c643be/Nornis_official.png?w=1600&fm=webp" width="500">
+  
+   <span class="taitoru">Concerto di luce</span>
+
+
+   開催日時 2025年3月8日(土) OPEN/12:30 START/13:30
+   　　　   2025年3月8日(土) OPEN/18:00 START/19:00
+
+   開催場所 大宮ソニックシティ
+</pre>
+<p>関連URL</p>
+<pre>
+<a href="https://www.nornis.com/">公式ホームページ</a>
+  
+<a href="https://www.youtube.com/@Nornis">YouTube</a>
+
+<a href="https://x.com/_Nornis">公式X</a>
+
+<a href=seopage1>戌亥とこ</a>
+
+<a href=seopage2>町田ちま</a>
+</pre>
+  </h2>
+</body>
+</html>
